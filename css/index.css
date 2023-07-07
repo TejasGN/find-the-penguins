@@ -1,0 +1,248 @@
+/*CSS reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+/*CSS reset*/
+
+html{
+    height: 100%;
+}
+body {
+    background-color: #ccf5f5;
+    height: 100%;
+}
+
+#gameholder {
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+#title {
+    height: 150px;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    background-image:url('../images/penguin_title.png');
+}
+
+#score {
+    width: 120px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: Comic Sans MS;
+    font-size: 1em;
+    line-height: 1.8;
+    color: darkslategrey;
+    border: solid 1px #c3c3c3;
+    padding: 10px;
+}
+
+#welcome-div, #win-lose-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.welcome-wrap, .win-lose-wrap{
+    padding: 7px;
+    background: #fff;
+    border-radius: 10px;
+}
+.welcome-inner-wrap, .win-lose-inner-wrap{
+    padding: 15px;
+    text-align: center;
+    border: solid 1px #c3c3c3;
+    border-radius: 10px;
+}
+.welcome-inner-wrap h1, .win-lose-inner-wrap h2{
+    font-size: 27px;
+    font-weight: 700;
+    color: #6b6bc7;
+    padding-bottom: 15px;
+}
+.welcome-inner-wrap ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.welcome-inner-wrap ul li, .btn-wrap p{
+    border-radius: 10px;
+    border: solid 1px #c3c3c3;
+    padding: 10px;
+    line-height: 1.4;
+    min-width: 95px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 450ms;
+}
+.welcome-inner-wrap ul li:hover, .btn-wrap p:hover{
+    box-shadow: 1px 3px 10px rgb(0 0 0 / 50%);
+}
+.welcome-inner-wrap ul li:nth-child(2){
+    margin: 0 10px;
+}
+.diff-ttl{
+    font-size: 20px;
+    font-weight: 700;
+}
+.welcome-inner-wrap ul li:first-child .diff-ttl{
+    color: green;
+}
+.welcome-inner-wrap ul li:nth-child(2) .diff-ttl{
+    color: blue;
+}
+.welcome-inner-wrap ul li:last-child .diff-ttl{
+    color: red;
+}
+.diff-grid{
+    font-size: 14px;
+    padding: 7px 0;
+}
+.diff-desc{
+    font-size: 16px;
+}
+#game-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+#penguin1:hover, #penguin9:hover, #penguin17:hover {
+    background-image:url('../images/mound_1_hover.png');
+}
+#penguin1:active, #penguin9:active, #penguin17:active, #penguin9.hit, #penguin17.hit, #penguin1.hit {
+    background-image:url('../images/penguin_1.png');
+}
+#penguin1, #penguin9, #penguin17 {
+    background-image:url('../images/mound_1.png');
+}
+#penguin2:hover, #yeti2:hover, #penguin10:hover, #penguin18:hover {
+    background-image:url('../images/mound_2_hover.png');
+}
+#penguin2:active, #penguin10:active, #penguin18:active, #penguin10.hit, #penguin18.hit, #penguin2.hit {
+    background-image:url('../images/penguin_2.png');
+}
+#penguin2, #penguin10, #penguin18 {
+    background-image:url('../images/mound_2.png');
+}
+#penguin3:hover, #penguin11:hover, #penguin19:hover {
+    background-image:url('../images/mound_3_hover.png');
+}
+#penguin3:active, #penguin11:active, #penguin19:active, #penguin11.hit, #penguin19.hit, #penguin3.hit {
+    background-image:url('../images/penguin_3.png');
+}
+#penguin3, #penguin11, #penguin19 {
+    background-image:url('../images/mound_3.png');
+}
+#penguin4:hover, #yeti3:hover, #penguin12:hover, #penguin20:hover {
+    background-image:url('../images/mound_4_hover.png');
+}
+#penguin4:active, #penguin12:active, #penguin20:active, #penguin12.hit, #penguin20.hit, #penguin4.hit {
+    background-image:url('../images/penguin_4.png');
+}
+#penguin4, #penguin12, #penguin20 {
+    background-image:url('../images/mound_4.png');
+}
+#penguin5:hover, #penguin13:hover, #penguin21:hover {
+    background-image:url('../images/mound_5_hover.png');
+}
+#penguin5:active, #penguin13:active, #penguin21:active, #penguin13.hit, #penguin21.hit, #penguin5.hit {
+    background-image:url('../images/penguin_5.png');
+}
+#penguin5, #penguin13, #penguin21 {
+    background-image:url('../images/mound_5.png');
+}
+#penguin6:hover, #yeti2:hover, #penguin14:hover, #penguin22:hover {
+    background-image:url('../images/mound_6_hover.png');
+}
+#penguin6:active, #penguin14:active, #penguin22:active, #penguin14.hit, #penguin22.hit, #penguin6.hit {
+    background-image:url('../images/penguin_6.png');
+}
+#penguin6, #penguin14, #penguin22 {
+    background-image:url('../images/mound_6.png');
+}
+#penguin7:hover, #yeti5:hover, #penguin15:hover {
+    background-image:url('../images/mound_7_hover.png');
+}
+#penguin7:active, #penguin15:active, #penguin15.hit, #penguin7.hit {
+    background-image:url('../images/penguin_7.png');
+}
+#penguin7, #penguin15 {
+    background-image:url('../images/mound_7.png');
+}
+#penguin8:hover, #penguin16:hover {
+    background-image:url('../images/mound_8_hover.png');
+}
+#penguin8:active, #penguin16:active, #penguin16.hit, #penguin8.hit {
+    background-image:url('../images/penguin_8.png');
+}
+#penguin8, #penguin16 {
+    background-image:url('../images/mound_8.png');
+}
+#yeti1:hover {
+    background-image:url('../images/mound_9_hover.png');
+}
+.yeti:active, .yeti.hit {
+    background-image:url('../images/yeti.png') !important;
+}
+.yeti {
+    background-image:url('../images/mound_9.png');
+}
+.audio-container{
+    display: none;
+}
+#img-wrap{
+    position: absolute;
+    right: 30px;
+    transition: all 750ms;
+    bottom: -100%;
+    background-size: contain;
+    background-position: center;
+}
+.penguin, .yeti{
+    width: 100px;
+    height: 100px;
+    float: left;
+    cursor: pointer;
+    background-size: 100%;
+}
+
+#win-lose-div{
+    display: none;
+    min-width: 417px;
+}
+.score-wrap{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    padding-bottom: 20px;
+}
+#ur-scr{
+    color: green;
+}
+#hg-scr{
+    color: blue;
+}
+.btn-wrap{
+    display: flex;
+}
+.btn-wrap p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn-wrap p:first-child{
+    margin-right: 15px;
+    color: green;
+}
+.btn-wrap p:last-child{
+    color: blue;
+}

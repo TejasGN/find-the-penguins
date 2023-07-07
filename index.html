@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Find the Penguins</title>
+        <meta charset="utf-8">
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/findPenguins.js"></script>
+        <link rel="icon" type="image/ico" href="images/ftp.ico" />
+        <link rel="prefetch" href="audio/penguin_sound.mp3">
+        <link rel="prefetch" href="audio/yeti_sound.mp3">
+    </head>
+    <body>
+        <div id="gameholder">
+            <div id="title"></div>
+            <div id="score">
+                <p>Score: <span id="curr_score">0</span></p>
+                <p>High Score: <span id="high_score"></span></p>
+            </div>
+            <div id="welcome-div">
+                <div class="welcome-wrap">
+                    <div class="welcome-inner-wrap">
+                        <h1>Choose your difficulty</h1>
+                        <ul>
+                            <li class="diffclty" data-diff="easy">
+                                <p class="diff-ttl">Easy</p>
+                                <p class="diff-grid">3 X 3</p>
+                                <p class="diff-desc">1 Yeti</p>
+                            </li>
+                            <li class="diffclty" data-diff="medium">
+                                <p class="diff-ttl">Medium</p>
+                                <p class="diff-grid">4 X 4</p>
+                                <p class="diff-desc">2 Yetis</p>
+                            </li>
+                            <li class="diffclty" data-diff="hard">
+                                <p class="diff-ttl">Hard</p>
+                                <p class="diff-grid">5 X 5</p>
+                                <p class="diff-desc">2 &#60; Yetis &#62; 6</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="win-lose-div">
+                <div class="win-lose-wrap">
+                    <div class="win-lose-inner-wrap">
+                        <h2 id="win-lose-txt"></h2>
+                        <div class="score-wrap">
+                            <p>Your Score: <span id="ur-scr"></span></p>
+                            <p>High Score: <span id="hg-scr"></span></p>
+                        </div>
+                        <div class="btn-wrap">
+                            <p id="restrt-game">Play Again</p>
+                            <p id="chng-dffclty">Change Difficulty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="audio-container">
+                <audio id="penguin_audio" src="audio/penguin_sound.mp3"></audio>
+                <audio id="yeti_audio" src="audio/yeti_sound.mp3"></audio>
+            </div>
+            <div id="img-wrap"></div>
+            <div id="game-container"></div>
+        </div>
+    </body>
+</html>
